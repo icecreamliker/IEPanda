@@ -2,35 +2,57 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>IEPanda</title>
-	<link rel="stylesheet" href="assets/css/bootstrap/css/bootstrap.min.css" />
-	<link rel="stylesheet" href="assets/css/index.css" />
+	<title>用户登录</title>
+	<link rel="stylesheet" href="assets/css/bootstrap/css/bootstrap.css" />
+	<link rel="stylesheet" href="assets/css/account.css?t=1" />
 </head>
 <body>
 	<div class="header">
-		<div class="container">
-			<div class="search">
-				<a href="index.htm" class="logo"></a>
-				<form class="search-box" action="/search">
-	            	<input class="search-ipt" type="text" />
-	            	<span class="search-btn">Submit</span>
-	        	</form>
-	        	<p class="sep">
-		        	<a href="login.htm" class="login" >登录</a>
-		        	| 
-		        	<a href="register.htm" class="reg" >注册新账号</a>
-		        </p>
-			</div>
-			<div class="menu"></div>
+		<div class="title">
+			<a href="index.htm">IEPanda</a>
 		</div>
 	</div>
 	<div class="bd">
-		bd
+		<div class="clearfix">
+			<h1>已有IEPanda账号登录</h1>
+			<a  class="get-pwd"  href="#">忘记密码 »</a>
+		</div>
+		<form method="post"  action="/register.action">
+			<fieldset>
+				<div class="field">
+					<label for="email">帐号：</label>
+					<input tabindex="1" type="text" name="email" id="email" value="" maxlength="30" data-holder="注册IEPanda账号时的邮箱地址。" value="注册IEPanda账号时的邮箱地址。" data-validate="^([\w\-\.]+(@|＠)[\w\-\.]+(\.\w+)+)$"/>
+				</div>
+				<div class="alert alert-error fade in">
+			            <button type="button" class="close" data-dismiss="alert">×</button>
+			            对不起，您输入的帐号不符合规范。
+			    </div>
+				<div class="field">
+					<label for="password">密码：</label>
+					<input tabindex="2" type="text" name="password" id="password" value="" maxlength="20"" />
+				</div>
+				<div class="alert alert-error fade in">
+			            <button type="button" class="close" data-dismiss="alert">×</button>
+			            对不起，密码不能为空。
+			    </div>
+				<div class="check">
+					<input type="checkbox" name="autolog" id="autolog" />
+					<label class="auto-label" for="autolog">下次自动登录</label>	
+				</div>
+				<div class="field">
+					<a class="submit" href="javascript:void 0" id="logbtn" tabindex="6">登录<span></span></a>
+				</div>
+			</fieldset>
+		</form>
 	</div>
 	<div class="footer">
-		footer
+		<div class="wrapper clearfix">
+			<a class="button" href="register.htm">注册IEPanda账号</a>
+			<a class="button2" href="login.htm">新浪微博账号登录</a>
+		</div>	
 	</div>
 	<script src="assets/js/jquery-1.7.2.min.js"></script>
-	<script src="assets/js/index.js"></script>
+	<script src="assets/css/bootstrap/js/bootstrap.min.js"></script>
+	<script src="assets/js/account.js"></script>
 </body>
 </html>
