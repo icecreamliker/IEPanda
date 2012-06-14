@@ -154,7 +154,7 @@ textarea {
 body {
   margin: 0;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 12px;
+  font-size: 1px;
   line-height: 18px;
   color: #333333;
   background-color: #ffffff;
@@ -767,7 +767,7 @@ label {
   color: #999;
 }
 
-.field input,
+input,
 textarea,
 select,
 .uneditable-input {
@@ -785,7 +785,6 @@ select,
      -moz-border-radius: 3px;
           border-radius: 3px;
 }
-
 
 .uneditable-textarea {
   width: auto;
@@ -810,6 +809,8 @@ input[type="radio"] {
 
   line-height: normal;
   cursor: pointer;
+  background-color: transparent;
+  border: 0 \9;
   /* IE9 and down */
 
   -webkit-border-radius: 0;
