@@ -8,6 +8,9 @@ body {
 	background-color: #F5F8FA;
 }
 
+input, input:hover, input:focus {
+	outline: none;
+}
 
 
 /*  register  */
@@ -34,7 +37,14 @@ body {
 	text-decoration: none;
 }
 
+.bd {
+	width: 540px;
+	min-height: 268px;
+	margin: 0 auto;
+}
+
 .bd h1 {
+	float: left;
 	font: 12px/18px "Microsoft Yahei", "Lucida Grande", "Segoe UI", Tahoma, Arial, Verdana, "STHeiti", sans-serif;
 	margin-left: 60px;
 	font-size: 20px;
@@ -43,15 +53,23 @@ body {
 	padding-top: 12px;
 }
 
+.bd .get-pwd {
+	float: left;
+	display: inline-block;
+	margin: 14px 0 0 170px;
+	font: 13px/18px "Microsoft Yahei", "Lucida Grande", "Segoe UI", Tahoma, Arial, Verdana, "STHeiti", sans-serif;
+}
+
 .bd {
 	width: 540px;
+	min-height: 268px;
 	margin: 0 auto;
 }
 
 .bd .field {
-	margin: 5px 0 5px 60px;
+	padding: 10px 0 0 105px;
 	position: relative;
-
+	zoom: 1;
 }
 
 .bd .field input {
@@ -70,22 +88,43 @@ body {
 	position: relative;
 }
 
-.bd label {
+.bd .field label {
+	position: absolute;
+	left: 60px;
+	top: 17px;
 	font: 14px "Microsoft Yahei", "Lucida Grande", "Segoe UI", Tahoma, Arial, Verdana, "STHeiti", sans-serif;
 
 }
 
 .bd fieldset p {
-	display: block;
-	position: absolute;
-	top: 7px;
-	left: 55px;
-	font: 14px "Microsoft Yahei", "Lucida Grande", "Segoe UI", Tahoma, Arial, Verdana, "STHeiti", sans-serif;
+	display: inline-block;
+	height: 34px;
+
+	margin-left: 5px;
+	margin-bottom: 0px;
+	text-indent: 10px;
+	width: 373px;
+	font: 14px/34px "Microsoft Yahei", "Lucida Grande", "Segoe UI", Tahoma, Arial, Verdana, "STHeiti", sans-serif;
 	color: #a0a0a0;
+	background-color: #FFF;
+	
+}
+
+.bd .field input {
+	color: #a0a0a0;
+	font-family: "Microsoft Yahei", "Lucida Grande", "Segoe UI", Tahoma, Arial, Verdana, "STHeiti", sans-serif;
+}
+
+.bd .alert {
+	display: none;
+	margin-left: 105px;
+	width: 323px;
 }
 
 .bd .submit {
-	margin-left: 45px;
+	font: 14px "Microsoft Yahei", "Lucida Grande", "Segoe UI", Tahoma, Arial, Verdana, "STHeiti", sans-serif;
+	color: #a0a0a0;
+	margin-left: 5px;
 	display: inline-block;
 	zoom: 1;
 	height: 36px;
@@ -96,14 +135,22 @@ body {
 	padding: 0 53px 0 17px;
 }
 
+.bd a.submit:hover {
+	text-decoration: none;
+}
+
 .bd .submit span {
 	position: absolute;
-	left: 160px;
-	top: 7px;
+	left: 225px;
+	top: 17px;
 	display: block;
 	width: 22px;
 	height: 21px;
 	background: url(img/arrow.png) no-repeat 0 0;
+}
+
+.bd #logbtn span {
+	left: 180px;
 }
 
 .footer {
@@ -153,4 +200,18 @@ background-image: linear-gradient(top, #FDFDFD 0%, #DFDEDF 100%);
 .footer a:hover {
 	text-decoration: none;
 
+}
+
+/*  login */
+#autolog {
+	position: static;
+
+}
+
+.check {
+	padding-left: 110px;
+}
+
+.check .auto-label {
+	vertical-align: middle;
 }
