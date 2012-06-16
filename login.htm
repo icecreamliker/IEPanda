@@ -17,27 +17,25 @@
 			<h1>已有IEPanda账号登录</h1>
 			<a  class="get-pwd"  href="#">忘记密码 »</a>
 		</div>
-		<form method="post"  action="/register.action">
+		<form method="post" name="form1" id="form1"  action="/login.do">
 			<fieldset>
 				<div class="field">
 					<label for="email">帐号：</label>
-					<input tabindex="1" type="text" name="email" id="email" value="" maxlength="30" data-holder="注册IEPanda账号时的邮箱地址。" value="注册IEPanda账号时的邮箱地址。" data-validate="^([\w\-\.]+(@|＠)[\w\-\.]+(\.\w+)+)$"/>
+					<input tabindex="1" class="J-email" type="text" name="email" id="email" value="注册IEPanda账号时的邮箱地址" maxlength="30" data-holder="注册IEPanda账号时的邮箱地址"  data-validate="^([\w\-\.]+(@|＠)[\w\-\.]+(\.\w+)+)$"/>
 				</div>
-				<div class="alert alert-error fade in">
-			            <button type="button" class="close" data-dismiss="alert">×</button>
+				<div class="alert alert-error fade in J-email">
 			            对不起，您输入的帐号不符合规范。
 			    </div>
 				<div class="field">
 					<label for="password">密码：</label>
-					<input tabindex="2" type="text" name="password" id="password" value="" maxlength="20"" />
+					<input tabindex="2" type="password" style="color:#000;" name="password" id="password" value="" maxlength="20"" />
 				</div>
-				<div class="alert alert-error fade in">
-			            <button type="button" class="close" data-dismiss="alert">×</button>
-			            对不起，密码不能为空。
+				<div class="alert alert-error fade in J_pwd">
+			            对不起，密码不符合要求
 			    </div>
 				<div class="check">
 					<input type="checkbox" name="autolog" id="autolog" />
-					<label class="auto-label" for="autolog">下次自动登录</label>	
+					<label class="auto-label" for="autolog">下次自动登录</label>
 				</div>
 				<div class="field">
 					<a class="submit" href="javascript:void 0" id="logbtn" tabindex="6">登录<span></span></a>

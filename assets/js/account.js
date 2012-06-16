@@ -9,7 +9,8 @@ $(document).ready(function(){
 	//$('.alert').alert();
 
 	//注册页面初始化
-
+	/*  register functionalities */
+	/* j-email is reused in both pages */
 	$('.J-email').focus(function(){
 		var val = $('input.J-email').val();
 		var holder = $('input.J-email').attr('data-holder');
@@ -26,6 +27,7 @@ $(document).ready(function(){
 			$(this).css('color', '#a0a0a0');
 			$(this).val(holder);
 		}
+		/*
 		var reg_mail = /^([\w\-\.]+(@|＠)[\w\-\.]+(\.\w+)+)$/;
 		var email = $('input.J-email').val();
 		if(email.match(reg_mail)){
@@ -33,6 +35,7 @@ $(document).ready(function(){
 		}else {
 			$('div.J-email').css('display', 'block');
 		}
+		*/
 
 
 	});
@@ -53,13 +56,14 @@ $(document).ready(function(){
 			$(this).css('color', '#a0a0a0');
 			$(this).val(holder);
 		}
+		/*
 		var username = $('input.J-username').val();
 		if(username.length < 6 || username == holder){
 			$('div.J-username').css('display', 'block');
 		}else{
 			$('div.J-username').css('display', 'none');
 		}
-
+*/
 	});
 
 
@@ -81,11 +85,13 @@ $(document).ready(function(){
 			$('input.J-pwd-pwd').css('display','none');
 			$('input.J-pwd').css('display','block');
 		}
+		/*
 		if(val.length < 6){
 			$('div.J-pwd-pwd').css('display', 'block');
 		}else{
 			$('div.J-pwd-pwd').css('display', 'none');
 		}
+		*/
 
 
 	});
@@ -109,12 +115,13 @@ $(document).ready(function(){
 			$('input.J-pwd-pwd2').css('display','none');
 			$('input.J-pwd2').css('display','block');
 		}
+		/*
 		if(val != val2 || val == ''){
 			$('div.J-pwd-pwd2').css('display', 'block');
 		}else{
 			$('div.J-pwd-pwd2').css('display', 'none');
 		}
-
+*/
 
 	});
 
@@ -166,6 +173,38 @@ $(document).ready(function(){
 	$('#J-submit').click(function(ev){
 		ev.preventDefault();
 		validate();
+	});
+
+	/*  login functionalities */
+	function login_validate(){
+		var flag = true,
+			reg_mail = /^([\w\-\.]+(@|＠)[\w\-\.]+(\.\w+)+)$/,
+			email = $('input.J-email').val(),
+			password = $('#password').val();
+
+			if(email.match(reg_mail)){
+				$('div.J-email').css('display', 'none');
+			}else {
+				$('div.J-email').css('display', 'block');
+				flag = false;
+			}
+			//console.log(password.length)
+			if(password.length < 6){
+				$('div.J_pwd').css('display', 'block');
+				flag = false;
+			}else{
+				$('div.J_pwd').css('display', 'none');
+			}
+			if(flag){
+				document.form1.submit();
+			}else{				
+				return false;
+			}
+
+	}
+	$('#logbtn').click(function(ev){
+		ev.preventDefault();
+		login_validate();
 	});
 
 });

@@ -343,8 +343,8 @@ a:hover {
 }
 
 .row-fluid .span8 {
-  width: 65.95744680199999%;
-  *width: 65.90425531263828%;
+  width: 590px;
+  margin:0px 5px;
 }
 
 .row-fluid .span7 {
@@ -358,8 +358,8 @@ a:hover {
 }
 
 .row-fluid .span5 {
-  width: 40.425531911%;
-  *width: 40.3723404216383%;
+  width: 350px;
+  margin:0px 5px;
 }
 
 .row-fluid .span4 {
@@ -400,6 +400,7 @@ a:hover {
 
 .container-fluid {
   *zoom: 1;
+  margin-bottom: 20px;
 }
 
 .container-fluid:before,
@@ -2371,7 +2372,7 @@ table .span24 {
   z-index: 1000;
   display: none;
   float: left;
-  min-width: 160px;
+  width: 388px;
   padding: 4px 0;
   margin: 1px 0 0;
   list-style: none;
