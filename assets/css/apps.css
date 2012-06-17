@@ -200,7 +200,7 @@
 .bd .span3 .wrapper,
 .bd .span6 .wrapper,
 .bd .span7 .wrapper {
-	position: relative;
+
 	border: 1px solid #DFDFDF;
 	background: white;
 	margin-bottom: 20px;
@@ -211,23 +211,33 @@
 .bd .classify a {
 	padding-left: 6px;
 }
+.bd .classify .active a {
+	padding-left: 0px;
+	color: #6A0;
+}
+
+.bd .category li.active a {
+	padding-left: 0px;
+	color: #6A0;
+}
+
 
 .bd .classify a:hover {
 	color: #6A0;
 	text-decoration: none;
 }
 
-.bd .classify .active {
-	position: relative;
-}
 
-.bd .classify .active a {
-	color:#6A0;
+.bd .classify a {
+	display: inline-block;
+	line-height: 22px;
+	height: 22px;
+	vertical-align: middle;
 }
 
 
 .bd .classify .active span {
-	position: absolute;
+	vertical-align: middle;
 	border-bottom: 4px dashed transparent;
 	border-left: 4px solid #6A0;
 	border-right: 0;
@@ -252,14 +262,11 @@
 }
 
 .bd .first-page {
+	position: relative;
 	margin: 12px 0 15px 14px;
 
 }
 
-.bd .first-page span {
-	position: absolute;
-
-}
 
 .bd .category {
 	margin: 0 0 15px 13px;
