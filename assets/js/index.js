@@ -10,10 +10,11 @@ function yaoli(){
 }
 
 $(document).ready(function(){
-  //	$('.search-btn').click(function(ev){
-  		
 
- // 	});
+  	$("#J-search").bind('focus blur',function(){
+  		$(this).toggleClass('focus')
+
+  	});
 
   	$('#J-search').typeahead({
   		source: ["Alaska","Arizona","Arkansas","California","Colorado","Connecticut","姚立","压力2","Alabama"],
@@ -39,5 +40,36 @@ $(document).ready(function(){
   			
   		}
   	});
+    
+    $('.J-pop').popover({
+      animation: true,
+      placement: 'right',
+      trigger: 'hover',
+      title: '我是姚立',
+      content: function(){
+        return $(this).attr('data-desc');
+      }
+
+    });
+
+      $('.J-pop3').popover({
+      animation: true,
+      placement: 'left',
+      trigger: 'hover',
+      title: '我是姚立',
+      content: function(){
+        return $(this).parent().attr('data-desc');
+      }
+
+    });
+    $('.J-pop2').hover(function(){
+      $(this).children('.J-status').hide();
+      $(this).children('.install').show();
+    }, function(){
+      $(this).children('.J-status').show();
+      $(this).children('.install').hide();
+    });
+
+
 
 });
