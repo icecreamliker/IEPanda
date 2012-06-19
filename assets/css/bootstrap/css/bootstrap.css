@@ -373,13 +373,14 @@ a:hover {
 }
 
 .row-fluid .span2 {
-  width: 14.89361702%;
-  *width: 14.8404255306383%;
+  width: 590px;
+  margin: 0px;
 }
 
 .row-fluid .span1 {
-  width: 6.382978723%;
-  *width: 6.329787233638298%;
+  width: 150px;
+  margin-right: 10px;
+  margin-left: 0px;
 }
 
 .container {
@@ -2614,7 +2615,7 @@ button.close {
   *background-color: #d9d9d9;
   /* Buttons in IE7 don't get borders, so darken on hover */
 
-  background-position: 0 -15px;
+  /*background-position: 0 -15px; */
   -webkit-transition: background-position 0.1s linear;
      -moz-transition: background-position 0.1s linear;
       -ms-transition: background-position 0.1s linear;
@@ -2802,17 +2803,17 @@ button.close {
 
 .btn-success {
   background-color: #5bb75b;
-  *background-color: #51a351;
-  background-image: -ms-linear-gradient(top, #62c462, #51a351);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#62c462), to(#51a351));
-  background-image: -webkit-linear-gradient(top, #62c462, #51a351);
-  background-image: -o-linear-gradient(top, #62c462, #51a351);
-  background-image: -moz-linear-gradient(top, #62c462, #51a351);
-  background-image: linear-gradient(top, #62c462, #51a351);
+  *background-color: #6aad07;
+  background-image: -ms-linear-gradient(top, #8ac43d, #6aad07);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#8ac43d), to(#6aad07));
+  background-image: -webkit-linear-gradient(top, #8ac43d, #6aad07);
+  background-image: -o-linear-gradient(top, #8ac43d, #6aad07);
+  background-image: -moz-linear-gradient(top, #8ac43d, #6aad07);
+  background-image: linear-gradient(top, #8ac43d, #6aad07);
   background-repeat: repeat-x;
   border-color: #51a351 #51a351 #387038;
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
-  filter: progid:dximagetransform.microsoft.gradient(startColorstr='#62c462', endColorstr='#51a351', GradientType=0);
+  filter: progid:dximagetransform.microsoft.gradient(startColorstr='#8ac43d', endColorstr='#6aad07', GradientType=0);
   filter: progid:dximagetransform.microsoft.gradient(enabled=false);
 }
 
@@ -2823,6 +2824,17 @@ button.close {
 .btn-success[disabled] {
   background-color: #51a351;
   *background-color: #499249;
+  background-image: -ms-linear-gradient(top, #a5da56, #77b00a);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#a5da56), to(#77b00a));
+  background-image: -webkit-linear-gradient(top, #a5da56, #77b00a);
+  background-image: -o-linear-gradient(top, #a5da56, #77b00a);
+  background-image: -moz-linear-gradient(top, #a5da56, #77b00a);
+  background-image: linear-gradient(top, #a5da56, #77b00a);
+  background-repeat: repeat-x;
+  border-color: #51a351 #51a351 #387038;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  filter: progid:dximagetransform.microsoft.gradient(startColorstr='#a5da56', endColorstr='#77b00a', GradientType=0);
+  filter: progid:dximagetransform.microsoft.gradient(enabled=false);
 }
 
 .btn-success:active,
@@ -4419,22 +4431,24 @@ input[type="submit"].btn.btn-mini {
 }
 
 .popover-inner {
-  width: 210px;
+  width: 200px;
   padding: 1px;
   overflow: hidden;
-  background: #ccc;
+  background: #ddd;
  /* background: rgba(0, 0, 0, 0.8);*/
-  -webkit-border-radius: 6px;
-     -moz-border-radius: 6px;
-          border-radius: 6px;
+  -webkit-border-radius: 4px;
+     -moz-border-radius: 4px;
+          border-radius: 4px;
   -webkit-box-shadow: 0 0 15px #ccc;
      -moz-box-shadow: 0 0 15px #ccc;
           box-shadow: 0 0 15px #ccc;
 }
 
 .popover-title {
-  padding: 9px 15px;
-  line-height: 1;
+
+  color: #999;
+  padding: 10px 8px 0 10px;
+  line-height: 17px;
   background-color: #fff;
   -webkit-border-radius: 3px 3px 0 0;
      -moz-border-radius: 3px 3px 0 0;
@@ -4442,7 +4456,8 @@ input[type="submit"].btn.btn-mini {
 }
 
 .popover-content {
-  padding: 14px;
+  color: #999;
+  padding: 0 8px 10px 10px;
   background-color: #ffffff;
   -webkit-border-radius: 0 0 3px 3px;
      -moz-border-radius: 0 0 3px 3px;
@@ -4480,13 +4495,15 @@ input[type="submit"].btn.btn-mini {
 
 .thumbnails > li {
   float: left;
-  margin-bottom: 18px;
-  margin-left: 20px;
+  margin-bottom: 5px;
+  margin-left: 25px;
 }
 
 .thumbnail {
   display: block;
-  padding: 4px;
+  padding: 5px;
+  width: 75px;
+  height: 75px;
   line-height: 1;
   border: 1px solid #ddd;
   -webkit-border-radius: 4px;
@@ -4498,10 +4515,6 @@ input[type="submit"].btn.btn-mini {
 }
 
 a.thumbnail:hover {
-  border-color: #0088cc;
-  -webkit-box-shadow: 0 1px 4px rgba(0, 105, 214, 0.25);
-     -moz-box-shadow: 0 1px 4px rgba(0, 105, 214, 0.25);
-          box-shadow: 0 1px 4px rgba(0, 105, 214, 0.25);
 }
 
 .thumbnail > img {

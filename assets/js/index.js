@@ -71,5 +71,62 @@ $(document).ready(function(){
     });
 
 
+    $('.btn1').hover(function(ev){
+      $(this).parent().removeClass();
+      $(this).parent().addClass('detail-btn-status1');
+    },function(ev){
+      $(this).parent().removeClass();
+      $(this).parent().addClass('detail-btn-normal');
+    }
+    );
 
+    $('.btn2').hover(function(ev){
+      $(this).parent().removeClass();
+      $(this).parent().addClass('detail-btn-status2');
+    },function(ev){
+      $(this).parent().removeClass();
+      $(this).parent().addClass('detail-btn-normal');
+    }
+    );
+
+    $('.btn1').mousedown(function(ev){
+      $(this).parent().removeClass();
+      $(this).parent().addClass('detail-btn-status3');
+
+    }
+    );
+    $('.btn1').mouseup(function(ev){
+      $(this).parent().removeClass();
+      $(this).parent().addClass('detail-btn-normal');
+
+    }
+    );
+    $('.btn2').click(function(){
+       var _offset = $(this).offset();
+      $('#J_dropdown').css('left', _offset.left-100);
+      $('#J_dropdown').css('top', _offset.top+32);
+      $('#J_dropdown').toggle();
+
+    });
+
+    $('#J_security').popover({
+      animation: true,
+      placement: 'right',
+      trigger: 'hover',
+      title: '已通过安全检测，没有病毒、木马等有害手机的恶意程序。请放心下载使用。<div class="sep"></div>',
+      content: function(){
+        return $(this).attr('data-desc');
+      }
+
+    });
+
+  
+
+
+});
+
+$(window).load(function() {
+        $('#featured').orbit({
+           animation: 'horizontal-push'
+        });
 });

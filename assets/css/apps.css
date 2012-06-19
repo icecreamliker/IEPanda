@@ -13,6 +13,10 @@
 	margin-top: 20px;
 }
 
+.app-list {
+	margin-top: 20px;
+}
+
 .app-list h3 {
 	font-size: 14px;
 	line-height: 36px;
@@ -187,7 +191,7 @@
 }
 
 .apps {
-	margin-top: 20px;
+	margin-top: 0px;
 }
 
 .apps h3 {

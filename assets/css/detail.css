@@ -1,178 +1,134 @@
 /*****************************************
  * author: yaoli<yaoli111144@gmail.com>
  * time:   2012-6-16
- * desc:   specific style for homepage body
+ * desc:   specific style for detail page
  ******************************************/
 
 /* body */
-.banner {
-	background: url(img/banner.jpg) no-repeat bottom right;
-	height: 400px;
-	position: relative;
-	margin-bottom: 20px;
-	margin-top: 20px;
-}
-
-.app-list h3 {
-	font-size: 14px;
-	line-height: 36px;
-	margin: 0 0 10px;
-}
-
-.app-list .wrapper,
-.app-list .right-list {
-	border: 1px solid #DFDFDF;
-	background: white;
-	margin-bottom: 20px;
-	border-radius: 5px;
-	box-shadow: 0px 0px 4px rgba(204, 204, 204, 0.8);
-}
-
-.app-list .wrapper ul {
-	margin: 0 6px;
-}
-
-.app-list .wrapper ul li {
-	text-align: center;
-	display: inline-block;
-	float: left;
-	margin: 0px 1px;
-	padding: 10px 0px;
-	width: 80px;
-	min-width: 80px;
-	overflow: hidden;
-}
-
-.app-list .wrapper a,
-.app-list .wrapper a:hover,
-.app-list .right-list a,
-.app-list .right-list a:hover {
-	color: #444;
-}
-
-.app-list .wrapper a.img {
-	display: block;
-	text-align: center;	
-}
-
-.app-list .wrapper a.img .desc {
-	display: block;
-	_display: inline-block;
-	height: 18px;
-	margin: 3px 10px;
-	overflow: hidden;
-	text-overflow: ellipsis;
-}
-
-.app-list .wrapper img {
-	display: block;
+.detail-container {
+	width: 750px;
 	margin: 0 auto;
-	width: 48px;
-	height: 48px;
 }
 
-.app-list .wrapper .install  a,
-.app-list .right-list .install  a{
-	height: 18px;
-	color: #444;
-	background-color: #E8E8E8;
-	background-image: -webkit-gradient(linear, left top, left bottom, from(white), color-stop(0.25, white), to(#E8E8E8));
-	background-image: -moz-linear-gradient(0 25% 270deg, white,#E8E8E8);
-	filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0,StartColorStr='#ffffff',EndColorStr='#e8e8e8');
-	border: 1px solid #CCC;
-	border-radius: 2px;
+.breadcrumb {
+	border: none;
+	background: none;
+	padding: 0px;
+	margin-top: 20px;
+	margin-bottom: 10px;
+}
+
+.detail-thumbnails {
+	border: 1px solid #D7D7D7;
+	background-color: #EDEDED;
+	padding: 5px;
+	border-radius: 3px;
+}
+
+.thumbnail-wrapper {
+	width: 84px;
+	height: 84px;
+	margin-left: 25px;
+
+}
+
+.detail-thumbnails img {
+	display: block;
+	height: 72px;
+	width: 72px;
+}
+
+.detail-btn {
+	margin-top: 13px;
+}
+
+.btn1 {
 	display: inline-block;
-	padding: 0 10px;
-	line-height: 20px\9;
-	_line-height: 18px;
-	_vertical-align: bottom;
+	height: 32px;
+	width: 100px;
 }
 
-.app-list .wrapper .install a:hover,
-.app-list .right-list .install a:hover {
-	text-decoration: none;
+.btn2 {
+	display: inline-block;
+	height: 32px;
+	width: 29px;
 }
 
-.app-list .wrapper .install a:active,
-.app-list .right-list .install a:active {
-	outline: none;
-	background-image: -webkit-gradient(linear, left top, left bottom, from(#E8E8E8), to(white));
-	background-image: -moz-linear-gradient(center top,#E8E8E8,white);
-	filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0,StartColorStr='#e8e8e8',EndColorStr='#ffffff');
-	text-decoration: none;
+.detail-btn-normal,
+.detail-btn-status1,
+.detail-btn-status2,
+.detail-btn-status3 {
+	width: 132px;
+	height: 32px;
+	background: url(img/download-btn.png) no-repeat 0 0;
+	cursor: pointer;
+
 }
 
-.app-list .right-list ul {
-	margin-left: 4px;
+.detail-btn-status1 {
+	background-position: 0 -38px;
 }
 
-.app-list .right-list li {
-	height: 33px;
-	position: relative;
+.detail-btn-status2 {
+	background-position: 0 -75px;
+}
+
+.detail-btn-status3 {
+	background-position: 0 -110px;
+}
+
+.detail-btn .dropdown-menu {
+	width: 150px;
+}
+
+.detail-legend {
+	margin-top: 10px;
+}
+
+.detail-legend .bold {
+	display: inline-block;
+	line-height: 20px;
+	font-weight: bold;
+	color: #777;
+	width: 65px;
+}
+
+.detail-legend .thin {
+	display: inline-block;
+	line-height: 20px;
+	color: #999;
+	width: 85px;
+}
+
+.detail-divider {
+	height: 1px;
+	margin: 8px 1px;
+	overflow: hidden;
+	background-color: #E5E5E5;
+	border-bottom: 1px solid white;
+}
+
+i {
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	background: url(img/detail_sprite.png) no-repeat 0 0;
 	vertical-align: middle;
 }
 
-.app-list .right-list li span {
-	display: inline-block;
+i.security {
+	background-position: 0 -503px;
 }
 
-.app-list .right-list .desc {
-	float:left;
-	height: 24px;
-	line-height: 24px;
-	margin-top: 6px;
-	margin-left: 4px;
-	width: 130px;
-	overflow: hidden;
-	text-overflow: ellipsis;
-	white-space: nowrap;
+.detail-security span {
+	color: #6A0;
+	cursor: pointer;
+	padding-left: 4px;
 }
 
-.app-list .right-list .index {
-	color: gray;
-	line-height: 22px;
-	width: 20px;
-	text-align: center;
-	font-size: 12px;
-	float: left;
-	margin-top: 7px;
+.popover .sep {
+	border-top: 1px solid #EDEDED;
+	padding-top: 8px;
+	margin-top: 8px;
 }
 
-.app-list .right-list .img {
-	margin-left: 5px;
-	float: left;
-	margin-top: 5px;
-}
-
-.app-list .right-list .install {
-	position: absolute;
-	right: 5px;
-	top: 7px;
-	display: none;
-}
-
-.app-list .right-list .status-icon1,
-.app-list .right-list .status-icon2,
-.app-list .right-list .status-icon3,
-.app-list .right-list .status-icon4
- {
-	position: absolute;
-	right: 15px;
-	top: 9px;
-	background: url(img/icon_sprite.png) no-repeat 0 0;
-	display: inline-block;
-	width: 20px;
-	height: 16px;
-}
-
-.app-list .right-list .status-icon2 {
-	background-position: 0 -16px;
-}
-
-.app-list .right-list .status-icon3 {
-	background-position: 0 -32px;
-}
-
-.app-list .right-list .status-icon4 {
-	background-position: 0 -48px;
-}
