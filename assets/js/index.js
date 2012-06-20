@@ -10,6 +10,7 @@ function yaoli(){
 }
 
 $(document).ready(function(){
+    var ISAUTO = false;
 
   	$("#J-search").bind('focus blur',function(){
   		$(this).toggleClass('focus')
@@ -116,6 +117,20 @@ $(document).ready(function(){
       title: '已通过安全检测，没有病毒、木马等有害手机的恶意程序。请放心下载使用。<div class="sep"></div>',
       content: function(){
         return $(this).attr('data-desc');
+      }
+
+    });
+
+    $('.detail-more-change').click(function(ev){
+      ev.preventDefault();
+      if(!ISAUTO){
+        $('.detail-app-content-desc').css('height', 'auto');
+        $(this).html('收起');
+        ISAUTO = true;
+      }else{
+        $('.detail-app-content-desc').css('height', '95px');
+        $(this).html('展开');
+        ISAUTO = false;
       }
 
     });
